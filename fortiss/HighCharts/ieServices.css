@@ -1,0 +1,180 @@
+/******************************
+* HTML Components
+*******************************/
+
+body {
+    font: 12px sans-serif;
+}
+
+#header{
+    margin-left:auto;
+    margin-right:auto;
+    width: 1200px;
+}
+
+#line-below-header{
+    width: 100%;
+    height: 1px;
+    background: #000000;
+}
+
+#main-site{
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#charts{
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#shift{
+    display: inline-block;
+    width: 20px;
+}
+
+@media (max-width: 1650px) {
+    .NavigationLeft{
+        max-width:  1200px;
+        padding:10px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media (min-width: 1650px) {
+    .NavigationLeft{
+        width:  200px;
+        padding:10px;
+        margin: 0px;
+        float:  left;
+    }
+}
+
+.NavigationLeft span,
+.NavigationLeft a {
+    display:block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*font: 16px sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #a00045;
+    */
+
+}
+
+.NavigationLeftInnearBody {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #a00045;
+}
+
+
+.NavigationLeft a:hover {
+    background: linear-gradient(to bottom, #0033CC 0%,#000099 100%);
+}
+
+.historyNavigation{
+    padding-left: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.wrapperMonth, .wrapperDay, .wrapperHour {
+  display: grid;
+  /* grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr) ;
+  grid-template-rows: repeat(3, 1fr) ;
+*/
+    grid-template-columns: auto ;
+
+    grid-gap: 5px;
+  background-color: #fff;
+  color: #444;
+}
+
+.historyDataMonth, historyDataDay, historyDataHour{
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+/*
+Checkbox
+ */
+
+
+/* Customize the label (the containerCheckBox) */
+.containerCheckBox {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckBox:hover input ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckBox input:checked ~ .checkmark {
+    background-color: #33FF33;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
