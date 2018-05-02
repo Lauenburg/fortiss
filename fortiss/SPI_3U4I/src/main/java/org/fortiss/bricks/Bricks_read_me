@@ -1,0 +1,12 @@
+Bricks
+
+The package "Bricks" contains the classes representing the different brick models which are being used.
+
+The interface "Bricks" is being used by all to the package "Bricks" external methods and classes.
+It is of particular relevance when various brick models are in use.
+
+At the moment only bricks of the model 3U4I are being used.
+The appropriate class contains the data-bodys as well as the data-header which can be used by the brick.
+The methods are manly used to initialize the bricks according to the specifications from the json-file.
+Additionally there are methods to manipulate initial structure of the data representing the brick 
+as well as methods to update this data while thepProgram is running (for example updating the communication counter).

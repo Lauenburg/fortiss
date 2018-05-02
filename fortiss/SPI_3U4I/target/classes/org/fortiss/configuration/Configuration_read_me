@@ -1,0 +1,92 @@
+Configuration_read_me
+
+Structure of the data packages 
+
+IMPORTANT:
+Since a SPI interface is being used for the data transfer it has to be kept in mind that a slave can only "talk" when ever it is "talked" to.
+Therefore if a slave has n
+
+Every data package no matter if its for initialization, setup or data transfer has the following structure:
+
+	data header [3 Bytes] +  data body [n Bytey] , n ≥ 2
+
+The data header always consist of the following three bytes: 
+1. Byte: Addresbyte	
+2. Byte: Commandbyte
+3. Byte: Checksumbyte
+
+	- Addressbyte:
+	The Bricks are connected in a daisy chain. 
+	If a brick receives a data package with an address unequal his own he sets his slave select line to high to send it on.
+		-Has to be set to zero when initializing the bricks.
+		-Gets assigned to each brick during the initialization process via the first byte of the initialization data body . 
+	
+	- Commandbyte:
+	Tells the brick fitting the address byte what action to perform.
+		- 2: do Initialization
+		- 3: select next slave
+		- 10: do data exchange (read and write simultaneously)
+
+	- Checksumbyte:
+	Used to check if the brick works correctly.
+	IMPORTANT: If the checksum byte send to the brick doesn't equals 85 the responds will be unusable.
+	The checksum byte always has to amount to 85.
+		=>Addresbyte+Commandbyte+Checksumbyte=85
+	
+The data body can consist of n bytes depending on which brick is used.
+Every data body has at least the following two bytes:
+1. Byte: Statusbyte
+----
+----
+n. Byte: Checksumbyte
+
+IMPORTANT:  When checking the datasheet of a brick neither the status byte nor the checksum byte will be listed.
+			Therefore if the datasheet states that a brick uses 5 bytes for the data he collects the data body send to him mast be 7 bytes long.
+			
+		-Statusbyte
+		Refers to the status of the brick. 
+		  	  0: the slave hasn't been initialized 
+		  	  1: everything is ok
+  			100: transfer error
+  			200: Module reports: to few data packages are being transfered 
+ 			201: Module reports: no data packages have been transfered for a long time
+ 			202: Module reports: to many faulty data packages are being received 
+		
+
+Data_Header:
+The class Data_Header is a universal representation of the header. 
+By calling Data_Header.headerData(slaveAdress, command) you can set the address and the command accordingly.
+At the moment this class is only used for the initialization and the select next slave routine.
+The data transfer routine has it own implementation of the data header do to convenience during the setup.
+
+Data_Initialization:
+The class Data_Initialization represents the data body for the initialization sequence.
+With Data_Initialization.initializationData(slaveAdress) you can set the address accordingly.
+
+Data_SlaveSelect:
+The class Data_SlaveSelect represents the data body for the select sequence.
+With Data_SlaveSelect.slaveSelectData(slaveAdress) you can set the address accordingly.
+
+Setup:
+The Setup class handels the whole setup of the data packages according to the information given by the 
+Json-File before starting one of the Thread_Communicate classes.
+When initializing the class the constructor will make a call to the setting() method.
+This method goes through the array of the Json representing the wrapper classes.
+For every entry in this array the method will create an brick instance and add it to the list "bricksList".
+The format of the unique bricks depends on the entry in the array which represents the brick.
+For more information on the Json format have a lock at the read me file in the package org.fortiss.json 
+After setting up the bricks, the method setting() makes calls to the methods:
+initDataHeader(), initDataBody(), selectDataHeader() and selectDataBody()
+to create the to the List bricksList fitting data packages for the initialization.
+
+
+
+
+
+
+
+
+
+
+
+

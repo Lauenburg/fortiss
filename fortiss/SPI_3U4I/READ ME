@@ -1,0 +1,56 @@
+SPI_3U41
+
+How to get going:
+
+1. Setup the pi with a Linux based OS like raspbian .
+
+2. Enable the SSH (https://www.raspberrypi.org/documentation/remote-access/ssh/) to be able to remotecontroll the pi.
+
+3. Install the pi4j-libaray on the Pi (http://pi4j.com/install.html)
+	3.1 If you run in to an error message it is most likly that you have to downgrade the proccessor.
+		Downgrade to the version v.4.4.49 via the command "sudo rpi-update 'HashCode'"
+		HashCode = https://github.com/Hexxeh/rpi-firmware/commit/2ca627126e49c152beb1bf7abd7122ce076dcc65
+
+5. Build the Jar-file or use build Jar and copy the jar to the brick
+   sshpass -p 'raspberry' scp '/location of the Jar/Name of the Jar.jar'  pi@192.168.21.232:/home/pi/Desktop
+
+6  Copy the Jasonfiles to the Pi. 
+   IMPORTANT: Copy the Jasons to "/home/pi/Desktop" or adjust the location
+   in the class JasonFileReader of the package org.fortiss.jason
+ 	6.1 sshpass -p 'raspberry' scp '/location of the Jason/setupFile.json'  pi@192.168.21.232:/home/pi/Desktop
+ 	6.2 sshpass -p 'raspberry' scp '/location of the Jason/operationFile.json'  pi@192.168.21.232:/home/pi/Desktop
+    
+8. Copy the logging.properties file to the Pi. 
+   IMPORTANT: Copy the file to "/home/pi/Desktop" or adjust the location by changing the "Default VM Argument" with in eclipse. 
+   To do so click on propertys than click on "Installed JREs" choose the appropriate JRE (Java SE 8) and than click "edit". 
+   Now change the field "Default VM Arguments" by tipping: -Djava.util.logging.config.file=/location of the file/logging.properties
+   If you are ok with "/home/pi/Desktop" you can just use the command
+   sshpass -p 'raspberry' scp '/location of the logging file/logging.properties'  pi@192.168.21.232:/home/pi/Desktop
+   
+   To locate the "logging.properties" file execute a program containing "System.getProperty("java.home")".
+   Copy that path. Add "/lib" to the path => "path/lib" and execute in a terminal "cd path/lib" now look for the file "logging.properties".
+   IMPORTANT: Copy the file, don't change the original. 
+   																			
+
+9. Menuver to the location of the Jar and execute it via the command: sudo nice -n -19 java -jar NameOFJar.jar
+   The flag "nice -n -19" gives the Jar the highest processor priority in account of the timecritical SPI-protocoll 
+
+
+How to operate the code:
+
+1. Execute the code (see 7. of How to get going)
+
+@Outdated
+2. First you will be prompted with the Question of which code you want to execute.
+	2.1 By pressing "o" you enter Operating mode
+		Operational Mode: 	The class "Thread_CommunicateJason" will be executed.
+							There are 2 possible flags to be set. 
+							For Flag == 1 the answer of the brick gets printed to screen as an array with out any adjustment
+							For FLag == 2 the answer will be intgrated in to an instance of the wrapper class "Message" converted to a gson and posted to the backend server
+		By Pressing "d" you enter the debugging mode
+		Debugging mode:		The class "Thread_CommunicateDebug" will be executed
+							There are 2 possible flags to be set. 
+							For Flag == 1 the answer of the brick gets printed to screen as an array with out any adjustment
+							For FLag == 2 the answer will be printed to the screen in a human readable style including the calculated analog values
+							
+							
