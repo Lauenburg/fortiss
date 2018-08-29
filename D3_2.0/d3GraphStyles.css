@@ -1,0 +1,16 @@
+.axisHistory {
+    font: 15px sans-serif;
+}
+.axisHistory path{
+    stroke-width: 1;
+}
+.axisHistory line {
+    z-index: 10;
+    stroke: lightgrey;
+    stroke-opacity: 0.5;
+    shape-rendering: crispEdges;
+}
+
+.serie{
+    z-index: 100;
+}

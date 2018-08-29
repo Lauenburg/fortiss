@@ -1,0 +1,123 @@
+/****************************
+subHeader: refresh button, selectButtons and overal consumption
+****************************/
+
+.flex-containerRefresh {
+    padding-top: -20px;
+    display: flex;
+    clear: both;
+    flex-direction: row;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+}
+
+/*
+Arrow button right
+ */
+
+
+r.btn{
+    height:50px;
+    width: 60px;
+    line-height:55px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0px 10px;
+    color:#666600;
+    background-color:#ffbf00;
+    position:relative;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+r.btn:after{
+    position:absolute;
+    right:-30px;
+    top: -5px;
+    content:" ";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 0px 30px 30px;
+    border-color: transparent transparent transparent #ffbf00;
+}
+r.btn:hover{
+    background-color:red;
+}
+r.btn:hover:after{
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 25px 0 25px 25px;
+    border-color: transparent transparent transparent #ff0000;
+}
+
+/*
+Arrow button left
+ */
+
+
+l.btn{
+    height:50px;
+    width: 60px;
+    line-height:55px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0px 10px;
+    color:#666600;
+    background-color:#ffbf00;
+    position:relative;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+l.btn:after{
+    position:absolute;
+    right:76px;
+    top: -5px;
+    content:" ";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 0px 30px 30px;
+    border-color: transparent transparent transparent #ffbf00;
+    transform: rotate(-180deg);
+}
+l.btn:hover{
+    background-color:red;
+}
+l.btn:hover:after{
+    right:85px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 25px 0 25px 25px;
+    border-color: transparent transparent transparent #ff0000;
+}
+/*
+l.btn:hover:after:active {
+    border-color: #2196F3;
+    border-width: 2px;
+}
+*/
+
+/*
+Middel refresh button
+ */
+.refreshButton{
+    display: flex;
+    top: 10px;
+    justify-content: center;
+    background-color: #ffbf00;
+    border: none;
+    color: #666600;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.refreshButton:hover{
+    background-color:red;
+}

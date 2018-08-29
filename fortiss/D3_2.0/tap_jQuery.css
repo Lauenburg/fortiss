@@ -1,0 +1,55 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+
+.tab-panels ul {
+    margin: 0;
+    padding: 0;
+}
+.tab-panels ul li {
+    list-style-type: none;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 300;
+    float: left;
+    width:20%;
+    margin:2.5%;
+    background: #a00045;
+    padding: 10px 0px;
+    border-radius: 2px 2px 2px 2px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+/*
+If I hover or click on a panel it becomes darker
+*/
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels ul li.active {
+    color: #fff;
+    background: #666;
+}
+
+
+.tab-panels .panel {
+    display:none;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+/*
+If a class changes from "class = panel" to "class = panel active" the active style
+overrides those attributs both classes have => display is changed from none to block
+*/
+.tab-panels .panel.active {
+    display:block;
+}
