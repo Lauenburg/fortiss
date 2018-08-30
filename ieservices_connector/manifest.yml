@@ -1,7 +1,0 @@
----
-applications:
-- name: ieservices-connector
-  memory: 1024M
-  host: ieservices-connector
-  domain: app-test.intra.swm.de
-  path: target/ieservies_connector-0.2.jar
