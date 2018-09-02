@@ -1,7 +1,21 @@
+<link rel="stylesheet" type="text/css" media="all" href="https://github.com/Lauenburg/fortiss/new/master/D3_2.0/css/README.css" />
+
 #### D3_2.0
 
-<img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png" width="48">
-![alt-text-1](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png){:height="30%" width="30%"}![alt-text-2](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.07.png){:height="30%" width="30%"}![alt-text-3](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.48.png){:height="30%" width="30%"}
+
+<div class="row">
+  <div class="column">
+    <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.48.png" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+
 
 D3_2.0 is a versatile data visualization for the data acquired by the deployed energy monitoring systems using the JavaScript framework D3. 
 
