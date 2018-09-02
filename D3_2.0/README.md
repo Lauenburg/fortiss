@@ -1,5 +1,8 @@
 #### D3_2.0
 
+
+![alt-text-1](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png) ![alt-text-2](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.07.png)![alt-text-3](https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.48.png)
+
 D3_2.0 is a versatile data visualization for the data acquired by the deployed energy monitoring systems using the JavaScript framework D3. 
 
 The data is presented in the wollowing formats: 
