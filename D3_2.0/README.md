@@ -1,16 +1,15 @@
-<link rel="stylesheet" type="text/css" media="all" href="https://github.com/Lauenburg/fortiss/new/master/D3_2.0/css/README.css" />
 
 #### D3_2.0
 
 
-<div class="row">
-  <div class="column">
+<div >
+  <div float = "left" width= "30%" padding = "5px">
     <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png" alt="Snow" style="width:100%">
   </div>
-  <div class="column">
+  <div float = "left" width= "30%" padding = "5px">
     <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.43.46.png" alt="Forest" style="width:100%">
   </div>
-  <div class="column">
+  <div float = "left" width= "30%" padding = "5px">
     <img src="https://github.com/Lauenburg/fortiss/blob/master/D3_2.0/Screenshots/Bildschirmfoto%202018-08-01%20um%2013.48.48.png" alt="Mountains" style="width:100%">
   </div>
 </div>
