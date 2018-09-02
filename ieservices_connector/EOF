@@ -1,10 +1,3 @@
-# iE Servcies Gateway
-
-Dieser Gateway stellt eine Verknüpfung zwischen den in den bei den Kunden erhobenen Energiedaten und einer PostrgeSQL Datenbank im SWM Backend dar.
-
-TBC 
-
-
 #### ieservices_connector
 
 ieservices_connector is the server site supplement to SPI_3U4I.
@@ -12,3 +5,4 @@ ieservices_connector is the server site supplement to SPI_3U4I.
 Using the Spring framework ieservices_connector implements a RESTful service and using the hibernate framework it maps incoming data to database tables of a Postgres database as well as handling the overall SQL queries.
 Additionally, ieservices_connector calculates the historical data from the incoming input and provides access to the data visualization D3_2.0.
 
+EOF
