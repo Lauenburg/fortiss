@@ -1,1 +1,6 @@
-D3_2.0/js/.DS_Store
+ieservices_connector/src/main/resources/static/js/lib/highcharts.js
+ieservices_connector/src/main/resources/static/js/lib/highchartsExporting.js
+ieservices_connector/src/main/resources/static/js/lib/highchartsNoData.js
+ieservices_connector/src/main/resources/static/js/lib/jquery.js
+ieservices_connector/src/main/resources/static/js/lib/moment.js
+ieservices_connector/src/main/resources/static/js/lib/notify.js

@@ -6,6 +6,7 @@
 
 ieservices_connector/src/main/resources/static/js/*.js
 
+ieservices_connector/src/main/resources/static/js/lib/*.js
 ### Eclipse ###
 
 .metadata
