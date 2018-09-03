@@ -4,7 +4,7 @@
 
 ### Recorce/js folder of the ieservices_connector since containing the HighChart js#
 
-fortiss/ieservices_connector/src/main/resources/static/*
+ieservices_connector/src/main/resources/static/js/*.js
 
 ### Eclipse ###
 
