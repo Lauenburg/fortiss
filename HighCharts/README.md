@@ -1,4 +1,4 @@
-####HighCharts
+#### HighCharts
 
 <img src="https://github.com/Lauenburg/fortiss/blob/master/HighCharts/Screenshots/Bildschirmfoto 2018-05-02 um 11.09.20.png"  width="300px">
 
